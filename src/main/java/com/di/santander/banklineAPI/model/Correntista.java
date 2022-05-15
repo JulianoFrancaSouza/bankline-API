@@ -1,0 +1,39 @@
+package com.di.santander.banklineAPI.model;
+
+public class Correntista {
+	
+	private int id;
+	private String cpf;
+	private String nome;
+
+	//extende conta
+	private Conta conta;
+	public Conta getConta() {
+		return conta;
+	}
+	public void setConta(Conta conta) {
+		this.conta = conta;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	
+	
+}
