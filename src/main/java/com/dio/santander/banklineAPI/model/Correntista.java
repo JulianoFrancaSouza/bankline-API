@@ -1,4 +1,4 @@
-package com.di.santander.banklineAPI.model;
+package com.dio.santander.banklineAPI.model;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
@@ -14,12 +14,14 @@ public class Correntista {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
 	@Column(length = 20)
 	private String cpf;
+	
 	@Column(length = 60)
 	private String nome;
 
-	//extende conta
+//	extende conta
 	@Embedded
 	private Conta conta;
 	public Conta getConta() {
@@ -47,7 +49,5 @@ public class Correntista {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
 	
 }

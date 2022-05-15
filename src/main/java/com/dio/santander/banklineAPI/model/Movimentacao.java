@@ -1,5 +1,4 @@
-package com.di.santander.banklineAPI.model;
-
+package com.dio.santander.banklineAPI.model;
 
 import java.time.LocalDateTime;
 
@@ -19,13 +18,17 @@ public class Movimentacao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@Column(name = "data_hora_movimentacao")
 	private LocalDateTime dataHora;
+	
 	private String descricao;
+	
 	private Double valor;
 	
 	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
+	
 	public Integer getId() {
 		return id;
 	}
