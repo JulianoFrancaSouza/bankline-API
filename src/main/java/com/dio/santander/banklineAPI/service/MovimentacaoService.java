@@ -27,11 +27,11 @@ public class MovimentacaoService {
 		Double valor = novaMovimentacao.getValor();
 		if(novaMovimentacao.getTipo() == MovimentacaoTipo.DESPESA) {
 			valor = valor * -1;
-		}else if(novaMovimentacao.getTipo() == MovimentacaoTipo.RECEITA){
-			valor = valor;
-		}else {
-			System.out.println("erro valor");
-			System.err.println("erro valor");
+		}else{
+			if(novaMovimentacao.getTipo() != MovimentacaoTipo.RECEITA){
+				System.out.println("erro valor");
+				System.err.println("erro valor");
+			}
 		}
  		movimentacao.setDataHora(LocalDateTime.now());
 		movimentacao.setDescricao(novaMovimentacao.getDescricao());
